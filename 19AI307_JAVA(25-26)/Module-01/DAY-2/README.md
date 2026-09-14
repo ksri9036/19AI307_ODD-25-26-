@@ -42,8 +42,8 @@ To write a Java program that accepts a code number and determines the security l
  ```
 /*
 Program to implement a conditional statement using Java
-Developed by: SARAVANA KUMAR S
-RegisterNumber: 212224220090
+Developed by: SRI KARTHICK R
+RegisterNumber: 212224060260
 */
 ```
 
