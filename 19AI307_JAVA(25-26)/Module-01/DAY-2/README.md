@@ -1,47 +1,26 @@
-# Ex.No:1(B) CONDITIONAL STATEMENT
+# Ex.No:1(C) LOOPING STATEMENT
 
 ## QUESTION:
-A pirate ship has a code lock that only opens if:
 
-1)The input code is even, and
-
-2)If it is less than 100, say "Weak Code".
-
-3)If it is between 100 and 999, say "Strong Code".
-
-4)If the code is odd, deny access.
+Write a Java program to reverse a number using a while loop. For example, if the input is 1234, the output should be 4321
 
 ## AIM:
-Aim:
-To write a Java program that accepts a code number and determines the security level based on the given conditions:
-- If the code is even and less than 100 → Display "Weak Code"
-- If the code is even and between 100 and 999 → Display "Strong Code"
-- Otherwise → Display "Access Denied"
+To reverse a given integer using a while loop in Java.
 
 ## ALGORITHM :
-1. Start the program.
-2. Create a Scanner object to read input from the user.
-3. Read an integer value from the user and store it in variable 'code'.
-4. Check if 'code' is even (code % 2 == 0):
-     a. If 'code' is less than 100:
-          - Print "Weak Code".
-     b. Else if 'code' is between 100 and 999 (inclusive):
-          - Print "Strong Code".
-     c. Else:
-          - Print "Access Denied".
-5. If 'code' is odd:
-     - Print "Access Denied".
-6. End the program.
 
-
-
-
-
+1.	Start the program.
+2.	Import the necessary package 'java.util'
+3.	Read the input number from the user.
+4.	Set rev = 0.
+5.	Use a while loop: extract last digit using num % 10, build reverse using rev = rev * 10 + digit, update num = num / 10.
+6.	Print the reversed number.
+7.	Stop the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a conditional statement using Java
+Program to implement a Looping Statement using Java
 Developed by: SARAVANA KUMAR S
 RegisterNumber: 212224220090
 */
@@ -50,37 +29,31 @@ RegisterNumber: 212224220090
 ## SOURCE CODE:
 ```
 import java.util.Scanner;
-
-public class PirateCodeLock {
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int code = sc.nextInt();
-
-        if (code % 2 == 0) {
-            if (code < 100) {
-                System.out.println("Weak Code");
-            } else if (code >= 100 && code <= 999) {
-                System.out.println("Strong Code");
-            }
-            else
-            {
-                System.out.println("Access Denied");
-            }
-        } else {
-            System.out.println("Access Denied");
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int ReverseNumber = 0;
+        while(number > 0) {
+            int digit = number % 10;
+            ReverseNumber = (ReverseNumber * 10) + digit;
+            number = number / 10;
         }
+        System.out.println("Reversed number: "+ReverseNumber);
     }
 }
-
 ```
 
-
 ## OUTPUT:
-<img width="1253" height="395" alt="image" src="https://github.com/user-attachments/assets/4a2d9365-69a5-452d-bc72-f619377d3b5a" />
 
+<img width="527" height="205" alt="Screenshot 2025-11-14 135656" src="https://github.com/user-attachments/assets/ede84122-4b48-48c7-b29e-9c5a711d2e72" />
 
 ## RESULT:
-Therefore,the program has been executed successfully.
+
+Thus the output is executed successfully.
+
+
+
 
 
 
