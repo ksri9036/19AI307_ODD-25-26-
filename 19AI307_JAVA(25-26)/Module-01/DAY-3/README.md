@@ -1,18 +1,20 @@
-# Ex.No:1(D) ARRAYS
+# Ex.No:1(C) LOOPING STATEMENT
 
 ## QUESTION:
-Write a Java Program to count Even and Odd Numbers in an Array.
+
+Write a Java program to reverse a number using a while loop. For example, if the input is 1234, the output should be 4321
 
 ## AIM:
-To count the number of even and odd elements in an array using Java.
+To reverse a given integer using a while loop in Java.
 
 ## ALGORITHM :
+
 1.	Start the program.
 2.	Import the necessary package 'java.util'
-3.	Read the array size and array elements from the user.
-4.	Initialize two counters: evenCount = 0 and oddCount = 0.
-5.	Traverse the array and increment evenCount for even numbers and oddCount for odd numbers.
-6.	Display the values of evenCount and oddCount.
+3.	Read the input number from the user.
+4.	Set rev = 0.
+5.	Use a while loop: extract last digit using num % 10, build reverse using rev = rev * 10 + digit, update num = num / 10.
+6.	Print the reversed number.
 7.	Stop the program.
 
 ## PROGRAM:
@@ -25,34 +27,26 @@ RegisterNumber: 212224060260
 ```
 
 ## SOURCE CODE:
-
 ```
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int Size = scan.nextInt();
-        int Odd = 0;
-        int Even = 0;
-        int[] numbers = new int[Size];
-        for(int i=0;i<numbers.length;i++) {
-            numbers[i] = scan.nextInt();
-            if(numbers[i] % 2 == 0) {
-                Even += 1;
-            }
-            else {
-                Odd += 1;
-            }
+        int number = scan.nextInt();
+        int ReverseNumber = 0;
+        while(number > 0) {
+            int digit = number % 10;
+            ReverseNumber = (ReverseNumber * 10) + digit;
+            number = number / 10;
         }
-        System.out.println("Number of even elements: "+Even);
-        System.out.println("Number of odd elements: "+Odd);
+        System.out.println("Reversed number: "+ReverseNumber);
     }
 }
 ```
 
 ## OUTPUT:
 
-<img width="557" height="466" alt="image" src="https://github.com/user-attachments/assets/65f6b94c-c7e0-42bc-b67a-5ecf7d26b5b1" />
+<img width="527" height="205" alt="Screenshot 2025-11-14 135656" src="https://github.com/user-attachments/assets/ede84122-4b48-48c7-b29e-9c5a711d2e72" />
 
 ## RESULT:
 
